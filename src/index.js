@@ -58,7 +58,7 @@ module.exports = {
     },
     preguntasFrecuentes : function(req,res){
         res.write(`${homePage.titulo}\n${preguntasFrecuentes.titulo}\n\n\n`)
-        res.write(`𝐓𝐎𝐏 ${preguntasFrecuentes.total()} 𝐃𝐄 𝐏𝐑𝐄𝐆𝐔𝐍𝐓𝐀𝐒 𝐅𝐑𝐄𝐂𝐔𝐍𝐄𝐓𝐄𝐒:\n\n`)
+        res.write(`𝐓𝐎𝐏 ${preguntasFrecuentes.total()} 𝐃𝐄 𝐏𝐑𝐄𝐆𝐔𝐍𝐓𝐀𝐒 𝐅𝐑𝐄𝐂𝐔𝐄𝐍𝐓𝐄𝐒:\n\n`)
         let faqs = preguntasFrecuentes.leerJSON().faqs
         faqs.forEach(preg=>{
             res.write(`-  ${preg.faq_title}\n\n${preg.faq_answer}\n\n\n`)
